@@ -1,0 +1,50 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+syntax on
+
+autocmd FileType ruby,eruby,yaml,haml set sw=2 sts=2
+
+" imap <Tab> <C-P>
+map <F7> mzgg=G`z<CR>
+map <C-\> :Project <CR>
+
+set fileencodings=utf8
+set encoding=utf8
+set tabstop=4
+set autoindent
+set shiftwidth=4
+set expandtab
+
+set showcmd
+set nu
+set hlsearch
+
+
+set cursorcolumn
+set cursorline
+
+set pastetoggle=<F3>
+
+set listchars=tab:>✖,trail:✖
+set list
+
+" This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
+inoremap jj <Esc>
+
+"set mouse=a
+
+set wildmenu
+set wildmode=list:longest,full
+
+syntax enable
+colorscheme solarized
+call togglebg#map("<F5>")
+
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
