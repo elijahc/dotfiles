@@ -1,0 +1,9 @@
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
+	url = https://github.com/altercation/solarized.git
+[submodule "vim/bundle/project"]
+	path = vim/bundle/project
+	url = https://github.com/shemerey/vim-project.git
+[submodule "vim/bundle/vim-haml"]
+	path = vim/bundle/vim-haml
+	url = https://github.com/tpope/vim-haml.git
