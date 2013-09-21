@@ -40,7 +40,10 @@ set wildmenu
 set wildmode=list:longest,full
 
 syntax enable
+set background=dark
+"let g:solarized_termcolors=256
 colorscheme solarized
+
 call togglebg#map("<F5>")
 
 " Yank text to the OS X clipboard

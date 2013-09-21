@@ -10,3 +10,9 @@
 [submodule "vim/bundle/vim-javascript"]
 	path = vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "mintty/mintty-colors-solarized"]
+	path = mintty/mintty-colors-solarized
+	url = https://github.com/karlin/mintty-colors-solarized
+[submodule "mintty/dircolors-solarized"]
+	path = mintty/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized
