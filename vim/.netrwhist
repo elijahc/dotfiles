@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/elijah/nmh/dev/blink'
-let g:netrw_dirhist_2='/Users/elijah/nmh/dev'
-let g:netrw_dirhist_3='/Users/elijah/nmh/dev/rbc/lib/rbc'
-let g:netrw_dirhist_4='/Users/elijah/nmh/dev/blink/views'
-let g:netrw_dirhist_5='/Users/elijah/nmh/dev/blink/public/js'
-let g:netrw_dirhist_6='/Users/elijah/.vim'
