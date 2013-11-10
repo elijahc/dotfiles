@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/elijah/nmh/dev/bbi'
+let g:netrw_dirhist_2='/Users/elijah/projects/cramp-pub-sub-chat-demo/app'
+let g:netrw_dirhist_3='/Users/elijah/nmh/dev/blink'
+let g:netrw_dirhist_4='/Users/elijah/projects/hyperplane/config'
+let g:netrw_dirhist_5='/Users/elijah/projects/simpleplane/middlewares'
