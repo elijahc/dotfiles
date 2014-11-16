@@ -1,7 +1,35 @@
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible               " be iMproved
+filetype off                   " required!
 
-filetype plugin indent on
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'majutsushi/tagbar'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'avakhov/vim-yaml'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'lervag/vim-latex'
+
+" Github repos of the user 'vim-scripts'
+" => can omit the username part
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+" ...
+
+filetype plugin indent on     " required!
 
 syntax on
 
@@ -9,8 +37,9 @@ autocmd FileType ruby,eruby,yaml,haml set sw=2 sts=2
 
 " imap <Tab> <C-P>
 map <F7> mzgg=G`z<CR>
-map <C-\> :Project <CR>
 
+" Correct backspace behavior
+set backspace=indent,eol,start
 set fileencodings=utf8
 set encoding=utf8
 set tabstop=4
@@ -21,7 +50,6 @@ set expandtab
 set showcmd
 set nu
 set hlsearch
-
 
 set cursorcolumn
 set cursorline
@@ -41,10 +69,10 @@ set wildmode=list:longest,full
 
 syntax enable
 set background=dark
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 colorscheme solarized
 
-call togglebg#map("<F5>")
+" call togglebg#map("<F5>")
 
 " Yank text to the OS X clipboard
 noremap <leader>y "*y
@@ -52,4 +80,3 @@ noremap <leader>yy "*Y
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-
