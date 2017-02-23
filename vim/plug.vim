@@ -34,7 +34,7 @@ syntax on
 syntax enable
 
 set background=dark
-colorscheme gruvbox
+colorscheme molokai
 let g:soloarized_termcolors=16
 let g:rehash256 = 1
 

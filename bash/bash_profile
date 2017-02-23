@@ -1,0 +1,2 @@
+# so tmux sources bashrc
+. ~/.bashrc
