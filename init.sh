@@ -1,4 +1,12 @@
-ln -sf ~/.dotfiles/vim ~/.vim
-ln -sf ~/.dotfiles/vim/vimrc ~/.vimrc
+cd ~
 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+# Vim
+ln -sf $HOME/.dotfiles/vim ~/.vim
+ln -sf $HOME/.dotfiles/vim/plug.vim $HOME/.vimrc
+
+#Tmux
+ln -sf $HOME/.dotfiles/tmux/ $HOME/.tmux
+ln -sf $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+
+mkdir -p ~/.tmux/plugins
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
