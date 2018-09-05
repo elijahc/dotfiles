@@ -35,7 +35,7 @@ syntax on
 syntax enable
 
 set background=dark
-colorscheme molokai
+colorscheme solarized
 let g:soloarized_termcolors=16
 let g:rehash256 = 1
 
