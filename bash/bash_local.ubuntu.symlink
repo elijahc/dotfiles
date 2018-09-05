@@ -1,0 +1,11 @@
+# If on ubuntu Symlink me to ~/.bash_local
+
+# Weird fix for ubuntu
+# https://askubuntu.com/questions/54145/how-to-fix-strange-backspace-behaviour-with-urxvt-zsh
+TERM=screen-256color
+
+# Uncomment the following line to disable auto-setting terminal title.
+DISABLE_AUTO_TITLE="true"
+
+# Ubuntu encoding
+export LC_ALL=en_US.UTF-8

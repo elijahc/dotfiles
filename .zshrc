@@ -1,5 +1,4 @@
 export EDITOR=vim
- 
 #load testing
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
@@ -29,8 +28,8 @@ if [ -f $HOME/.zshenv ]; then
     source $HOME/.zshenv
 fi
 
-source /usr/local/Cellar/zsh/5.0.0/share/zsh/functions/promptinit
-prompt_adam2_setup
-setopt transientrprompt
+# source /usr/local/Cellar/zsh/5.0.0/share/zsh/functions/promptinit
+# prompt_adam2_setup
+# setopt transientrprompt
 
-stty erase 
+# stty erase 
