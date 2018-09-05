@@ -70,3 +70,7 @@ set list
 " This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
 inoremap jj <Esc>
 
+set clipboard=unnamed
+" Preserve indentation while pasting text from the OS X clipboard
+" noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
