@@ -15,7 +15,8 @@ Plug 'morhetz/gruvbox'
 " Syntax
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby', 'colorscheme': 'solarized' }
 Plug 'avakhov/vim-yaml', { 'for': 'yaml' }
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'elzr/vim-json', { 'for': 'json' }
+" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'hdima/python-syntax', { 'for': 'python', 'colorscheme': 'molokayo' }
 
 " Make commenting easier
