@@ -6,11 +6,15 @@ ZSH_DISABLE_COMPFIX="true"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export VPNHOST=amc-anywhere.ucdenver.edu
+export VPNUSER=chriseli
+export AUTHGROUP=ANY_CONNECT
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="lambda-mod"
 # DEFAULT_USER="elijahc"
 
 if [ -f ~/.bash_local ]; then
@@ -110,6 +114,35 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if [ -f $HOME/.bash_aliases ]; then
+    source $HOME/.bash_aliases
+fi
+
+function vpnsetup() {
+    sudo sh -c 'echo "%admin ALL=(ALL) NOPASSWD: /usr/local/bin/openconnect, /bin/kill" > /etc/sudoers.d/openconnect'
+}
+
+function vpnstart() {
+    gpg --decrypt -a ~/.vpn_pass.gpg 2>/dev/null | sudo openconnect \
+        --background \
+        --pid-file="$HOME/.openconnect.pid" \
+        --script=/usr/local/etc/vpnc-script-split \
+        --user=$VPNUSER \
+        --servercert=sha256:1a341debc187f588029878f6d884182f41a92013e9297b8eaa6dce88b797e65d \
+        --authgroup=$AUTHGROUP $VPNHOST \
+        --passwd-on-stdin
+}
+
+function vpnstop() {
+    if [[ -f "$HOME/.openconnect.pid" ]]; then
+        sudo kill -2 $(cat "$HOME/.openconnect.pid") && rm -f "$HOME/.openconnect.pid"
+    else
+        echo "openconnect pid file does not exist, probably not running"
+    fi
+}
+
+alias s='ssh'
 
 # SSH autocomplete
 # Highlight the current autocomplete option
