@@ -34,10 +34,13 @@ filetype plugin indent on     " required!
 syntax on
 syntax enable
 
+let g:soloarized_termcolors=256
+"let g:soloarized_termtrans = 1
+let g:soloarized_contrast = "high"
+let g:soloarized_visibility = "high"
+let g:rehash256 = 1
 set background=dark
 colorscheme solarized
-let g:soloarized_termcolors=16
-let g:rehash256 = 1
 
 autocmd FileType ruby,eruby,yaml,haml,vim set sw=2 sts=2
 
