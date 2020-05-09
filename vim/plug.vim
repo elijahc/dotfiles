@@ -10,7 +10,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'captbaritone/molokai'
 Plug 'fmoralesc/molokayo'
 Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
 
 " Syntax
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby', 'colorscheme': 'solarized' }
