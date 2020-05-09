@@ -16,14 +16,22 @@ Install homebrew apps
 cd ~/.dotfiles && ./brew.sh
 ```
 
+# Shell
+
+Clone repo into .dotfiles
+```bash
+git clone https://github.com/elijahc/dotfiles .dotfiles
+```
+
+## ZSH
 Install Oh My Zsh
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Clone repo into .dotfiles
+Install zsh-syntax-highlighting
 ```bash
-git clone https://github.com/elijahc/dotfiles .dotfiles
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 # Git
@@ -72,7 +80,11 @@ cd ~/.vim/pack/tpope/start
 git clone https://tpope.io/vim/sensible.git
 ```
 
-# Ruby
+# Languages
+
+## Ruby
+
+Install rbenv
 ```bash
 brew install rbenv
 ```
@@ -81,3 +93,18 @@ Add the following to `.bash_profile`/`.bashrc`:
 ```bash
 eval "$(rbenv init -)"
 ```
+
+## Python
+
+Install pyenv
+```bash
+brew install pyenv pyenv-virtualenv
+```
+
+Add the following to `.bash_profile`/`.bashrc`:
+```bash
+# Load pyenv and virtual env
+if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+```
+
