@@ -1,6 +1,9 @@
 dotfiles
 ========
 
+I took lots of inspiration from 
+[nicolashery/mac-dev-setup](https://github.com/nicolashery/mac-dev-setup)
+
 # macOS
 
 Install homebrew
@@ -59,4 +62,22 @@ Host myssh
   IdentityFile ~/.ssh/key.pem
 ```
 
+# Vim
 
+Use Tim Pope's sensible vim defaults
+
+```bash
+mkdir -p ~/.vim/pack/tpope/start
+cd ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/sensible.git
+```
+
+# Ruby
+```bash
+brew install rbenv
+```
+
+Add the following to `.bash_profile`/`.bashrc`:
+```bash
+eval "$(rbenv init -)"
+```
